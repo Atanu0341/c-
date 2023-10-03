@@ -49,11 +49,204 @@ int main(){
 ```
 
 2. Take name as input and print a greeting message for that particular name.
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    string name;
+
+    cout<<"Enter your name : ";
+    cin>>name;
+
+    cout << "Hello, " << name << "!" << endl;
+
+    return 0;
+}
+```
+
 3. Write a program to input principal, time, and rate (P, T, R) from the user and
    find Simple Interest.
+
+   ```c++
+    #include <iostream>
+    using namespace std;
+
+
+    int main(){
+
+    int p;
+    int r;
+    int t;
+
+    int simpleInterest;
+
+    cout<<"Enter the principal amount : ";
+    cin>>p;
+    cout<<"Enter the rate of interest : ";
+    cin>>r;
+    cout<<"Enter the time : ";
+    cin>>t;
+
+    simpleInterest = (p*r*t)/100;
+
+    cout<<"Simple interest is "<<simpleInterest<<endl;
+
+    return 0;
+    }
+
+   ```
+
+   by using function
+
+   ```c++
+    #include <iostream>
+   using namespace std;
+
+    int calculate(int p, int r, int t)
+    {
+        return (p _ r _ t) / 100;
+    }
+
+    int main()
+    {
+
+    int p, r, t;
+
+    cout << "Enter the principal amount: ";
+    cin >> p;
+    cout << "Enter the rate of interest: ";
+    cin >> r;
+    cout << "Enter the time: ";
+    cin >> t;
+
+    int simpleInterest = calculate(p, r, t);
+    cout << "Simple Interest = " << simpleInterest << endl;
+
+    return 0;
+
+    }
+
+   ```
+
 4. Take in two numbers and an operator (+, -, \*, /) and calculate the value.
    (Use if conditions)
+
+```c++
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+
+    int a, b;
+
+    cout << "Enter first number : ";
+    cin >> a;
+
+    cout << "Enter second number : ";
+    cin >> b;
+
+    char op;
+    cout << "Enter the Operation you want to perform (+, -, *, /) : ";
+    cin >> op;
+
+    if (op == '+')
+    {
+        int sum = a + b;
+        cout << "Sum is " << sum << endl;
+    }
+    else if (op == '-')
+    {
+        int sub = a - b;
+        cout << "Difference is " << sub << endl;
+    }
+    else if (op == '*')
+    {
+        int product = a * b;
+        cout << "Product is " << product << endl;
+    }
+    else if (op == '/')
+    {
+        int division = a / b;
+        cout << "Division is " << division << endl;
+    }
+    else
+    {
+        cout << "Enter a valid operators" << endl;
+    }
+
+    return 0;
+}
+```
+
+By using function
+
+```c++
+#include <iostream>
+using namespace std;
+
+int calculate(int a, int b, char op){
+if (op == '+')
+{
+int sum = a + b;
+cout << "Sum is " << sum << endl;
+}
+else if (op == '-')
+{
+int sub = a - b;
+cout << "Difference is " << sub << endl;
+}
+else if (op == '_')
+{
+int product = a _ b;
+cout << "Product is " << product << endl;
+}
+else if (op == '/')
+{
+int division = a / b;
+cout << "Division is " << division << endl;
+}
+else
+{
+cout << "Enter a valid operators" << endl;
+}
+
+}
+
+int main()
+{
+
+    int a, b;
+
+    cout << "Enter first number : ";
+    cin >> a;
+
+    cout << "Enter second number : ";
+    cin >> b;
+
+    char op;
+    cout << "Enter the Operation you want to perform (+, -, *, /) : ";
+    cin >> op;
+
+    calculate(a,b,op);
+
+
+    return 0;
+
+}
+
+```
+
 5. Take 2 numbers as input and print the largest number.
+
+```c++
+
+```
+
 6. Input currency in rupees and output in USD.
 7. To calculate Fibonacci Series up to n numbers.
 8. To find out whether the given String is Palindrome or not.
@@ -136,25 +329,25 @@ int main(){
 68. [Define a method to find out if a number is prime or not.](https://www.geeksforgeeks.org/java-program-to-check-if-a-number-is-prime-or-not/)
 
 69. [Write a program that will ask the user to enter his/her marks (out of 100). Define a method that will display grades according to the marks entered as below:](https://www.techcrashcourse.com/2017/02/java-program-to-calculate-grade-of-students.html) <br/>
-<pre> 
-Marks        Grade 
-91-100         AA 
-81-90          AB 
-71-80          BB 
-61-70          BC 
-51-60          CD 
-41-50          DD 
-<=40          Fail 
+<pre>
+Marks        Grade
+91-100         AA
+81-90          AB
+71-80          BB
+61-70          BC
+51-60          CD
+41-50          DD
+<=40          Fail
 </pre>
 
 70. [Write a program to print the factorial of a number by defining a method named 'Factorial'.](https://www.javatpoint.com/factorial-program-in-java)
 Factorial of any number n is represented by n! and is equal to 1 _ 2 _ 3 _ .... _ (n-1) \*n. E.g.- <br/>
 <pre>
-4! = 1 * 2 * 3 * 4 = 24 
-3! = 3 * 2 * 1 = 6 
-2! = 2 * 1 = 2 
-Also, 
-1! = 1 
+4! = 1 * 2 * 3 * 4 = 24
+3! = 3 * 2 * 1 = 6
+2! = 2 * 1 = 2
+Also,
+1! = 1
 0! = 1
 </pre>
 
@@ -217,3 +410,7 @@ Also,
 114. [Max Value of Equation](https://leetcode.com/problems/max-value-of-equation/)
 115. [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
 116. [Good Array](https://leetcode.com/problems/check-if-it-is-a-good-array/)
+
+```
+
+```
